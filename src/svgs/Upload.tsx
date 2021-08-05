@@ -1,14 +1,15 @@
 interface UploadSvgProps {
- className?: any;
- props?: any
+  className?: any;
+  props?: any;
+  fill?: any;
 }
 
-export default function Upload({ className, ...props }: UploadSvgProps) {
+export default function Upload({ className, fill, ...props }: UploadSvgProps) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={`${className} w-6 h-6`}
-    fill={props.fill || 'none'} 
+      fill={fill || 'none'}
       viewBox="0 0 24 24"
       stroke="currentColor"
     >
