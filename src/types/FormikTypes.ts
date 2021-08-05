@@ -1,7 +1,7 @@
 export interface FormValuesTypes {
   fullName: string | null;
   initialInvestment: null | string | number;
-  investmentRisk: string[] | object[] | null;
+  investmentRisk: any;
   commentAboutInvestmentRisk: string | null;
   dependents: number | string | null;
   acceptedTermsAndConditions: boolean;
