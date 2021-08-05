@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 
 export default function TailwindStepper({ allSteps, currentStep, stepNames }) {
   const [stepperSteps, setStep] = useState([]);
-  const stepsStateRef = useRef();
-  
+  const stepsStateRef: any = useRef();
+
   const steps = Array(allSteps)
     .fill('')
     .map((_, i) => {
@@ -97,7 +97,7 @@ export default function TailwindStepper({ allSteps, currentStep, stepNames }) {
           <div
             className={`absolute -bottom-5 text-center w-32 md:text-sm text-xs font-medium uppercase ${
               step.highlighted ? 'text-white' : 'text-gray-400'
-            } ${ step.completed && 'text-green-500' }`}
+            } ${step.completed && 'text-green-500'}`}
           >
             {step.description}
           </div>
